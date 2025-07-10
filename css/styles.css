@@ -30,6 +30,10 @@ header .column {
     font-size: 1.2em; /* Increases font size for better readability */
 }
 
+headeer .column img {
+    display: block;
+}
+
 
 nav {
     background-color: var(--secondary-color);
@@ -51,6 +55,10 @@ nav ul {
     padding: 0;
 }
 
+nav .hamburger {
+    display: none; /* Hide hamburger by default */
+}
+
 nav ul li {
     display: inline;
     margin-right: 20px;
@@ -70,4 +78,65 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        background-image: url('../images/NXT_LVL_LOGO-13-NoBG_size_width300_height150.png');
+        background-size: cover; /* Cover the header with the logo */
+        background-position: center; /* Center the logo */
+        background-repeat: no-repeat; /* Prevent repeating the logo */
+        background-color: var(--primary-color);
+        height: 150px; /* Set a fixed height for the header */
+        padding: 0; /* Remove padding for mobile */
+    }
+    header .column img {
+        display: none; /* Hide logo image on smaller screens */
+    }
+
+    nav {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Reduced padding for mobile */
+        position: relative; /* Change position to relative for mobile */
+        margin: 0; /* Remove margin for mobile */
+        background-color: var(--primary-color);
+        box-shadow: none; /* Remove shadow for mobile */
+    }
+
+    nav ul {
+        list-style: none;
+        display: block; /* Change to block for mobile */
+        padding: 0;
+        position: fixed; /* Fix the menu to the side */
+        top: 0;
+        left: -100%; /* Initially hide the menu off-screen */
+        width: 250px; /* Set the width of the menu */
+        height: 100%; /* Make the menu full height */
+        background-color: var(--primary-color);
+        transition: left 0.3s ease; /* Add a smooth slide-in animation */
+    }
+
+    nav ul.show {
+        left: 0; /* Slide the menu into view */
+    }
+
+    nav ul li {
+        display: block; /* Stack menu items vertically */
+        text-align: left; /* Align text to the left */
+        margin: 10px; /* Add spacing between items */
+    }
+
+    nav ul li a {
+        display: block; /* Make links block-level for easier clicking */
+        padding: 10px; /* Add padding for better touch targets */
+    }
+
+    nav .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+        font-size: 1.5em;
+        color: var(--text-color);
+        text-align: left;
+        padding: 10px;
+    }
 }

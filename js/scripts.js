@@ -9,3 +9,13 @@
         });
      });
 })();
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    const navLinks = document.querySelector('nav ul');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    const navLinks = document.querySelector('nav ul');
+    navLinks.classList.toggle('show'); // Toggle the 'show' class to slide the menu in/out
+});
