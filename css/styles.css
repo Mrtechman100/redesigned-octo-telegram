@@ -1,0 +1,73 @@
+/* File: css/styles.css */
+/* This file contains the styles for the redesigned-octo-telegram project */
+:root {
+    --primary-color: #012051; /* Primary color for the theme */
+    --secondary-color: #5688c7FF; /* Secondary color for navigation */
+    --text-color: white; /* Text color for headers and links */
+    --background-color: #dde1e9; /* Background color for the body */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes columns evenly */
+    align-items: center; /* Aligns content vertically */
+}
+
+header .column {
+    flex: 1; /* Ensures equal width for each column */
+    text-align: center; /* Centers text within each column */
+    font-size: 1.2em; /* Increases font size for better readability */
+}
+
+
+nav {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    width: 90%;
+    /* max-width: 1200px;  */
+    margin: -2% auto;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

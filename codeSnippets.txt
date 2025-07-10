@@ -1,0 +1,7 @@
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script src="js/scripts.js"></script>
+<!-- end Google Calendar Appointment Scheduling -->
+
+
