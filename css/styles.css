@@ -94,49 +94,91 @@ nav ul li a:hover {
         display: none; /* Hide logo image on smaller screens */
     }
 
+    nav .hamburger {
+        display: block;
+        position: relative; /* Position relative for hamburger */
+        z-index: 2; /* Ensure hamburger is above other elements */
+    }
+
+    nav .hamburger .line {
+        display: block; /* Show hamburger lines */
+        width: 20px; /* Set width for hamburger lines */
+        height: 3px; /* Set height for hamburger lines */
+        background-color: var(--text-color); /* Color for hamburger lines */
+        margin: 5px auto; /* Center the lines with margin */
+        border-radius: 4px; /* Rounded corners for hamburger lines */
+        -webkit-transition: all 0.3s ease-in-out; /* Smooth transition for hamburger lines */
+        -o-transition: all 0.3s ease-in-out; /* Smooth transition for hamburger lines */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hamburger lines */
+    }
+
+    nav .hamburger:hover {
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    nav .hamburger.is-active .line:nth-child(2) {
+        opacity: 0; /* Hide the middle line when active */
+    }
+
+    nav .hamburger.is-active .line:nth-child(1) {
+        -webkit-transform: translateY(14px) rotate(45deg); /* Rotate first line */
+        -o-transform: translateY(14px) rotate(45deg); /* Rotate first line */
+        transform: translateY(14px) rotate(45deg); /* Rotate first line */
+    }
+
+    nav .hamburger.is-active .line:nth-child(3){
+        -webkit-transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
+        -o-transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
+        transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
+    }
+
+
     nav {
-        width: 100%; /* Full width for mobile */
+        width: auto; /* Full width for mobile */
+        max-width: none; /* Remove max-width for mobile */
+        height: auto; /* Allow height to adjust based on content */
         padding: 10px; /* Reduced padding for mobile */
         position: relative; /* Change position to relative for mobile */
         margin: 0; /* Remove margin for mobile */
         background-color: var(--primary-color);
         box-shadow: none; /* Remove shadow for mobile */
+        border-radius: 0%;
     }
 
     nav ul {
         list-style: none;
-        display: block; /* Change to block for mobile */
-        padding: 0;
-        position: fixed; /* Fix the menu to the side */
-        top: 0;
-        left: -100%; /* Initially hide the menu off-screen */
-        width: 250px; /* Set the width of the menu */
-        height: 100%; /* Make the menu full height */
-        background-color: var(--primary-color);
-        transition: left 0.3s ease; /* Add a smooth slide-in animation */
+        display: flex; /* Change to flex for mobile */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 2px 0; /* Add padding for better spacing */
+        position: absolute; /* Fix the menu to the side */
+        width: 100%; /* Set the width of the menu */
+        max-height: 0; /* Initially hide the menu */
+        overflow: hidden; /* Prevent content from overflowing */
+        background-color: var(--primary-color); /* Menu background color */
+        transition: max-height 0.3s ease; /* Smooth slide-down animation */
+        top: 100%; /* Align the menu directly with the navigation bar */
+        left: 0; /* Position the menu at the left edge */
+        padding: 0; /* Remove padding to avoid gaps */
+        margin: 0; /* Remove margin to avoid gaps */
+        border-top: 2px solid var(--secondary-color); /* Add a top border for separation */
     }
 
     nav ul.show {
-        left: 0; /* Slide the menu into view */
+        max-height: 500px; /* Set a max height when showing the menu */
     }
 
     nav ul li {
-        display: block; /* Stack menu items vertically */
-        text-align: left; /* Align text to the left */
-        margin: 10px; /* Add spacing between items */
+        width: 100%; /* Full width for each item */
+        margin: 0; /* Add spacing between items */
+        padding: 10px 0; /* Add padding for better touch targets */
+        text-align: center;
+        border-bottom: 2px solid var(--secondary-color); /* Add a bottom border for separation */
     }
 
     nav ul li a {
         display: block; /* Make links block-level for easier clicking */
         padding: 10px; /* Add padding for better touch targets */
     }
-
-    nav .hamburger {
-        display: block; /* Show hamburger icon */
-        cursor: pointer;
-        font-size: 1.5em;
-        color: var(--text-color);
-        text-align: left;
-        padding: 10px;
-    }
+    
 }

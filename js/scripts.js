@@ -10,12 +10,13 @@
      });
 })();
 
-document.querySelector('.hamburger').addEventListener('click', () => {
-    const navLinks = document.querySelector('nav ul');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-});
 
+// Toggle the navigation menu on hamburger click
 document.querySelector('.hamburger').addEventListener('click', () => {
     const navLinks = document.querySelector('nav ul');
     navLinks.classList.toggle('show'); // Toggle the 'show' class to slide the menu in/out
+});
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('is-active');
 });
