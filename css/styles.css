@@ -121,15 +121,15 @@ nav ul li a:hover {
     }
 
     nav .hamburger.is-active .line:nth-child(1) {
-        -webkit-transform: translateY(14px) rotate(45deg); /* Rotate first line */
-        -o-transform: translateY(14px) rotate(45deg); /* Rotate first line */
-        transform: translateY(14px) rotate(45deg); /* Rotate first line */
+        -webkit-transform: translateY(8px) rotate(45deg); /* Rotate first line */
+        -o-transform: translateY(8px) rotate(45deg); /* Rotate first line */
+        transform: translateY(8px) rotate(45deg); /* Rotate first line */
     }
 
     nav .hamburger.is-active .line:nth-child(3){
-        -webkit-transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
-        -o-transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
-        transform: translateY(-14px) rotate(-45deg); /* Rotate third line */
+        -webkit-transform: translateY(-8px) rotate(-45deg); /* Rotate third line */
+        -o-transform: translateY(-8px) rotate(-45deg); /* Rotate third line */
+        transform: translateY(-8px) rotate(-45deg); /* Rotate third line */
     }
 
 
@@ -161,7 +161,7 @@ nav ul li a:hover {
         left: 0; /* Position the menu at the left edge */
         padding: 0; /* Remove padding to avoid gaps */
         margin: 0; /* Remove margin to avoid gaps */
-        border-top: 2px solid var(--secondary-color); /* Add a top border for separation */
+        border-top: 1px solid var(--secondary-color); /* Add a top border for separation */
     }
 
     nav ul.show {
@@ -173,7 +173,8 @@ nav ul li a:hover {
         margin: 0; /* Add spacing between items */
         padding: 10px 0; /* Add padding for better touch targets */
         text-align: center;
-        border-bottom: 2px solid var(--secondary-color); /* Add a bottom border for separation */
+        border-bottom: 1px solid var(--secondary-color); /* Add a bottom border for separation */
+        box-sizing: border-box; /* Ensure padding does not affect width */
     }
 
     nav ul li a {
